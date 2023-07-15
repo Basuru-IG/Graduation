@@ -1,0 +1,137 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - thankyou
+  - praise
+  - decry
+  - ask_for_eat
+  - ask_ability
+  - answer_name
+  - restaurant_search
+  - inform
+  - randomize
+  - nearby
+  - by_order
+  - inform_adress
+  # - route_selected
+
+entities:
+  - user_name
+  - user_address
+  - option
+  - address
+  - cuisine
+
+slots:
+  name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: user_name
+  user_address:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: user_address
+  address:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: address
+  cuisine:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: cuisine
+  option:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: option
+
+# templates:
+#   utter_ask_intent: 
+#   - buttons:
+#     - title: test1
+#       payload: /randomize
+#     - title: test2
+#       payload: /nearby
+#     - title: test3
+#       payload: /by_order
+#     text: "The answer is:"
+
+responses:
+  utter_greet:
+  - text: "Bot chào bạn nha. \nMình là chatbot được thiết kế để giúp các bạn quyết\
+      \ định 'hôm nay ăn gì?' ạ"
+  utter_ask_name:
+  - text: "Bạn vui lòng cho Bot biết tên để tiện xưng hô nhé!"
+  utter_greet_with_name:
+  - text: "Xin chào {name}!\n{name} cần Bot giúp gì không?"
+  utter_thanks:
+  - text: "Không có gì ạ! Bạn có cần bot giúp gì nữa không nhỉ?"
+  utter_goodbye:
+  - text: Hẹn gặp lại bạn sau ạ ^^
+  utter_goodbye_with_name:
+  - text: "Tạm biệt {name}!\nHãy quay lại với Bot khi {name} cần nhé!"
+  utter_happy:
+  - text: Hì hì, bạn khen quá lơì rồi ạ
+  utter_sorry:
+  - text: Tui xin lôĩ vì Tui chưa đủ thông minh ạ =(((
+  utter_noworries:
+  - text: Bot luôn sẵn lòng giúp đỡ các bạn bất cứ lúc nào ạ ^^
+  utter_show_ability:
+  - text: Bot có thể trò chuyện với các bạn, thi thoảng có thể đề xuất các bạn nên
+      ăn gì, ở đâu hôm nay ạ
+  utter_fallback:
+  - text: Bot xin lỗi, bot chưa hiểu ý muốn của bạn lắm ạ. Bạn có thể nói lại được
+      không ạ
+  # testing:
+  # - text: " {district}!\n{district} ?"
+  utter_ask_location:
+  - text: "Để hoạt động tốt hơn thì bạn có thể cho bot xin vị trí của bạn được không nhỉ?"
+  utter_get_restaurant_randomize:
+  - text: "Chọn nhà hàng theo xổ số nè ba:"
+  utter_get_restaurant_by_order:
+  - text: "Hãy đưa ra yêu cầu của bạn nha"
+  utter_get_restaurant_nearby:
+  - text: "Đây là danh sách những nhà hàng có vẻ gần với bạn nhất nè:"
+
+  utter_ask_route:
+  - text: "Cảm ơn bạn! Bạn có muốn bot tìm kiếm theo tiêu chuẩn gì nữa không"
+    buttons:
+    - title: "Như ở trên thôi"
+      payload: "/by_order"
+    - title: "Gần xíu nha"
+      payload: "/nearby"
+    - title: "Tốt tí nha"
+      payload: "/randomize"
+
+actions:
+  - utter_greet
+  - utter_happy
+  - utter_goodbye
+  - utter_sorry
+  - utter_noworries
+  - action_recommend
+  - utter_show_ability
+  - utter_fallback
+  - utter_thanks
+  # - action_yes_no
+  # - testing
+  - action_get_location
+  - action_get_restaurant_by_address
+  - action_get_restaurant_randomize
+  - action_get_restaurant_by_order
+  - action_get_restaurant_nearby
+  # - utter_ask_intent
+  - action_set_option
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+

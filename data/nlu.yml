@@ -1,0 +1,403 @@
+version: "3.1"
+
+nlu:
+
+- synonym: Món Nhật
+  examples: |
+    - Đồ Nhật
+    - đồ Nhật
+    - đồ Nhật Bản
+    - đồ Nhật bản
+    - đồ Nhật bản
+    - món Nhật
+    - món Nhật Bản
+    - món Nhật
+    - Món Nhật
+    - Món Nhật Bản
+    - món nhật
+
+- synonym: Ý
+  examples: |
+    - Đồ Ý
+    - đồ Ý
+    - đồ Ý
+    - đồ Ý
+    - đồ Ý
+    - món Ý
+    - món Ý
+    - món Ý
+    - Món Ý
+    - Món Ý
+    - món Ý
+
+- synonym: Hambuger
+  examples: |
+    - Hambuger
+    - Ham bơ gơ
+    - Hambogor
+    - Hambogơ
+    - Hambơgơr
+    - Hambơgơ
+    - Hambơ gơ
+    - Hambơ gơr
+
+- synonym: Café
+  examples: |
+    - Cà Phê
+    - Cafe
+    - Cà phê
+    - cafe
+    - cà phê
+    - CAFE
+    - CÀ PHÊ
+    - Coffee
+    - coffee
+
+
+
+- synonym: Quận 1
+  examples: |
+    - quận 1
+    - q1
+    - Q 1
+    - Q.1
+    - Q1
+    - Q. 1
+    - q 1
+    - q.1
+    - quận1
+    - quan 1
+    - quan1
+    - QUAN 1
+    - QUAN1
+
+- synonym: Quận 10
+  examples: |
+    - quận 10
+    - q10
+    - Q 10
+    - Q.10
+    - Q10
+    - Q. 10
+    - q 10
+    - q.10
+    - quận10
+    - quan 10
+    - quan10
+    - QUAN 10
+    - QUAN10
+
+- synonym: Quận 2
+  examples: |
+    - quận 2
+    - q2
+    - Q 2
+    - Q.2
+    - Q2
+    - Q. 2
+    - q 2
+    - q.2
+    - quận2
+    - quan 2
+    - quan2
+    - QUAN 2
+    - QUAN2 
+- intent: greet
+  examples: |
+    - chào em
+    - hello em
+    - hi em
+    - em ơi, cho anh hỏi
+    - bot ơi
+    - cho mình hỏi chút
+    - hey
+    - hello
+    - hi
+    - chào
+    - xin chào
+    - chào bot
+    - có ai ở đó không
+    - tôi cần hỗ trợ
+    - Chào bạn
+    - Chào anh
+    - Chào chị
+    - Chào buổi sáng
+    - Có đó không
+    - Rãnh không
+    - Ê
+    - Hú
+    - chào em
+    - em ơi, cho anh hỏi
+    - bot ơi
+    - cho mình hỏi chút
+    - Ê cu
+    - Ê bot
+    - Hey
+    - Em iu ơi
+    
+
+- intent: answer_name
+  examples: |
+    - Tôi tên là [Nam]{"entity": "user_name"}
+    - Chị tên là [Hoa]{"entity": "user_name"}
+    - Anh tên là [Long]{"entity": "user_name"}
+    - Mình tên là [Phúc]{"entity": "user_name"}
+    - Mình tên [Phát]{"entity": "user_name"}
+    - Em tên [Hà]{"entity": "user_name"} nhé
+    - Huy [Nam]{"entity": "user_name"}
+    - Gọi mình là [Phụng]{"entity": "user_name"} nha
+    - Tôi tên [Hoàng]{"entity": "user_name"}
+    - chị tên [Cúc]{"entity": "user_name"}
+    - anh tên [Đức]{"entity": "user_name"}
+    - [Tuấn]{"entity": "user_name"} nhé
+    - [Bình]{"entity": "user_name"}
+    - [Lĩnh]{"entity": "user_name"}
+    - [Viễn]{"entity": "user_name"}
+    - [Duy]{"entity": "user_name"}
+    - [Tú]{"entity": "user_name"}
+    - [Tâm]{"entity": "user_name"}
+    - [Xuân]{"entity": "user_name"}
+    - [Kiều]{"entity": "user_name"}
+    - [Thành]{"entity": "user_name"}
+    - [Đăng]{"entity": "user_name"}
+    - [Bình]{"entity": "user_name"}
+    - [Đạt]{"entity": "user_name"}
+    - [Vy]{"entity": "user_name"}
+    - [Loan]{"entity": "user_name"}
+    - [Luân]{"entity": "user_name"}
+    - [Quang]{"entity": "user_name"}
+    - [Thuận]{"entity": "user_name"}
+    - [Trọng]{"entity": "user_name"}
+    - [An]{"entity": "user_name"}
+    - [Kim]{"entity": "user_name"}
+    - [Hằng]{"entity": "user_name"}
+    - [Cường]{"entity": "user_name"}
+    - [Phú]{"entity": "user_name"}
+    - [Thiện]{"entity": "user_name"}
+    - [Hieu]{"entity": "user_name"}
+    - [hIEU]{"entity": "user_name"}
+    - [hUY]{"entity": "user_name"}
+- intent: ask_for_eat
+  examples: |
+    - trưa nay anh nên ăn gì nhỉ
+    - trưa nay ăn gì bây giờ nhỉ
+    - chọn giúp t bữa trưa phát
+    - ăn trưa nào
+    - tiểu nhị, chọn món
+    - bữa trưa
+    - ăn gì bây giờ
+    - Hôm nay ăn gì?
+    - Hôm nau ăn cc gì?
+    - Hãy giới thiệu hôm nay ăn gì?
+
+- intent: restaurant_search
+  examples: |
+    - Hãy tìm nhà hàng tốt
+    - Tôi muốn tìm một nhà hàng tốt
+    - Tôi muốn tìm một nhà hàng tốt ở đây
+    - Hãy tìm kiếm nhà hàng nào ok
+    - Tìm kiếm nhà hàng
+    - Hãy tìm kiếm nhà hàng
+    - Hãy tìm những nhà hàng tốt
+    - Tôi muốn tìm một nhà hàng tốt gần đây
+    - Bạn có thể giới thiệu cho tôi một nhà hàng ngon ở đây không?
+    - Tôi đang tìm một nơi ăn uống tốt cho gia đình tôi
+    - Có nhà hàng nào tốt ở đây không?
+    - Tôi cần tìm một địa điểm để ăn tối
+    - Bạn có thể giới thiệu cho tôi một nhà hàng địa phương không?
+    - Tôi đang tìm kiếm một nơi để ăn món ý
+    - Tôi muốn tìm một quán ăn gia đình
+    - Bạn có thể giới thiệu cho tôi một nhà hàng phù hợp với ngân sách của tôi không?
+    - Tôi muốn tìm một quán ăn tại khu vực này
+    - Có nhà hàng nào tốt để đi ăn [mỳ Ý]{"entity": "cuisine"} không?
+    - Hãy tìm kiếm nhà hàng ở [q1] {"entity": "address"}
+    - Cho tôi xem nhà hàng nào tại [q2] {"entity": "address"}
+    - Cho tôi xem nhà hàng nào tại [quận 2] {"entity": "address"}
+    - Cho tôi xem nhà hàng nào tại [Q.1] {"entity": "address"}
+    - Cho tôi xem nhà hàng nào tại [QUAN1] {"entity": "address"}
+    - Có nhà hàng nào tốt ở [quan1] {"entity": "address"} không?
+    - Tôi muốn tìm một nhà hàng ở [quan2] {"entity": "address"}
+    - Bạn có thể giới thiệu cho tôi một nhà hàng ngon ở [Q1] {"entity": "address"} không?
+    - Tôi muốn tìm một nhà hàng ở [quận 1] {"entity": "address"}
+    - Có nhà hàng nào tốt ở [quận 5]{"entity": "address"} không?
+    - Bạn có thể giới thiệu cho tôi một nhà hàng ngon ở [quận 3] {"entity": "address"} không?
+    - Tôi đang tìm kiếm một nhà hàng tại [quận 10] {"entity": "address"}
+    - Có nhà hàng nào tốt để đi ăn [mỳ Ý]{"entity": "cuisine"} ở [quận 7] {"entity": "address"} không?
+    - Tìm kiếm nhà hàng ở [quận 1](address)
+    - Cho tôi xem nhà hàng nào tại [quận 2](address)
+    - Có nhà hàng nào tốt ở [quận 3](address) không?
+    - Có nhà hàng nào tốt ở [Tân Bình]](address) không?
+    - Bạn có thể giới thiệu cho tôi một nhà hàng ngon ở [quận Tân Bình](address) không?
+    - Tôi đang tìm kiếm một nhà hàng tại [quận tân bình](address)
+    - Có nhà hàng nào tốt để đi ăn [mỳ Ý]{"entity": "cuisine"} ở [quận tân bình](address) không?
+    - Tìm kiếm nhà hàng ở [quận Bình Thạnh](address)
+    - Cho tôi xem nhà hàng nào tại [quận bình thạnh](address)
+    - Có nhà hàng nào tốt ở [quận bình thạnh](address) không?
+    - Có nhà hàng nào tốt ở [quận Hóc Môn](address) không?
+    - Bạn có thể giới thiệu cho tôi một nhà hàng ngon ở [quận hóc môn](address) không?
+    - Tôi muốn ăn [món Nhật]{"entity": "cuisine"} tại [Hoàng Văn Thụ]{"entity": "address"}
+    - Tôi muốn ăn [đồ Nhật]{"entity": "cuisine"} tại [Quận 1]{"entity": "address"}
+    - Tôi muốn ăn [Hambuger]{"entity": "cuisine"} tại [Quận 2]{"entity": "address"}
+    - Tôi muốn ăn [Phở]{"entity": "cuisine"} tại [đường Trường Chinh]{"entity": "address"}
+    - Tôi muốn ăn [đồ Âu]{"entity": "cuisine"} tại [đường Phạm Văn Đồng]{"entity": "address"}
+    - Hãy tìm quán ăn [bánh mì]{"entity": "cuisine"} tại [quận 1]{"entity": "address"}
+    - Cho tôi xem quán nào bán [đồ Hàn]{"entity": "cuisine"} ở [Lý Thường Kiệt]{"entity": "address"}
+    - Có quán nào bán [món Nhật]{"entity": "cuisine"} ở [quận 3]{"entity": "address"} không?
+    - Tôi muốn tìm một quán ăn ở [quận 10]{"entity": "address"}
+    - Bạn có thể giới thiệu cho tôi một quán ăn [phở]{"entity": "cuisine"} ngon ở [quận 7]{"entity": "address"} không?
+    - Tôi muốn tìm một quán [Bún bò]{"entity": "cuisine"} ở [quận 1]{"entity": "address"}
+    - Tôi muốn tìm một quán [Bún bò]{"entity": "cuisine"} ở [Hoàng Văn Thụ]{"entity": "address"}
+    - Hãy liệt kê những quán ăn ngon ở [quận 12]{"entity": "address"}
+    - Tôi muốn ăn [phở]{"entity": "cuisine"}
+    - Tôi muốn ăn [phở]{"entity": "cuisine"} ở [quận 1]{"entity": "address"}
+    - Tôi muốn ăn [phở]{"entity": "cuisine"} ở [quận 2]{"entity": "address"}
+    - Tìm quán bán [bún bò]{"entity": "cuisine"} 
+    - Tìm quán bán [bún bò]{"entity": "cuisine"} ở [quận 1]{"entity": "address"}
+    - Tìm [phở]{"entity": "cuisine"}
+    - Tìm [phở]{"entity": "cuisine"} ở [quận 1]{"entity": "address"}
+    - Tìm [phở]{"entity": "cuisine"} ở [quận 2]{"entity": "address"}
+    - Tìm [bánh mì]{"entity": "cuisine"} ở [quận 3]{"entity": "address"}
+    - Tìm [bún bò Huế]{"entity": "cuisine"} ở [quận 4]{"entity": "address"}
+    - Tìm [bún bò Huế]{"entity": "cuisine"} ở [quận 5]{"entity": "address"}
+    - Tìm [cơm tấm]{"entity": "cuisine"} ở [Võ Văn Kiệt]{"entity": "address"}
+    - Tìm [cơm tấm]{"entity": "cuisine"} ở [võ văn kiệt]{"entity": "address"}
+    - Hãy tìm quán có bán [cơm sườn]{"entity": "cuisine"}
+    - Hãy tìm quán có bán [cơm sườn]{"entity": "cuisine"} ở [quận 1]{"entity": "address"}
+    - Hãy tìm quán có bán [Phở]{"entity": "cuisine"} ở [quận 2]{"entity": "address"}
+    - Hãy tìm quán có bán [Mì Ý]{"entity": "cuisine"} ở [quận 3]{"entity": "address"}
+    
+# - intent: route_selected
+#   examples: |
+#     - /by_order
+#     - /nearby
+#     - /randomize
+
+- intent: inform_adress
+  examples: |
+    - Tôi ở [Quận 1]{"entity": "user_address"}
+    - Tôi ở [Quận 2]{"entity": "user_address"}
+    - Tôi ở [Quận 3]{"entity": "user_address"}
+    - Tôi ở [Quận 4]{"entity": "user_address"}
+    - Tôi ở [Quận 5]{"entity": "user_address"}
+    - Tôi ở [Quận 6]{"entity": "user_address"} 
+    - Tôi ở [đường Lý Thường Kiệt]{"entity": "user_address"}
+    - Tôi ở [đường Cộng Hòa]{"entity": "user_address"}
+    - Tôi ở [Cộng Hòa]{"entity": "user_address"}
+    - Tôi ở [lí thường kiệt]{"entity": "user_address"}
+    - Tôi đang ở [Nguyễn Thị Minh Khai]{"entity": "user_address"}
+    - [đường Lý Thường Kiệt]{"entity": "user_address"}
+    - [đường Cộng Hòa]{"entity": "user_address"}
+    - [Quận 6]{"entity": "user_address"}
+    - [Q1]{"entity": "user_address"}
+    - [Q2]{"entity": "user_address"}
+    - [Q3]{"entity": "user_address"}
+    - [Quan1]{"entity": "user_address"}
+    - [Quan2]{"entity": "user_address"}
+    - [Quan3]{"entity": "user_address"}
+    - Đang ở quận [Quan3]{"entity": "user_address"}
+    - [Đường Lý Thường Kiệt]{"entity": "user_address"}
+    - [Đường Cộng Hòa]{"entity": "user_address"}
+    - [Đường lý Thường Kiệt]{"entity": "user_address"}
+    - [Đường cộng Hòa]{"entity": "user_address"}
+- intent: by_order
+  examples: |
+    - {/by_order}{"entity": "option"}
+    - {by_order}{"entity": "option"}
+- intent: nearby
+  examples: |
+    - {/nearby}{"entity": "option"}
+    - {nearby}{"entity": "option"}
+- intent: randomize
+  examples: |
+    - {/randomize}{"entity": "option"}
+    - {randomize}{"entity": "option"}
+    - rating tốt xí
+    - tốt tốt tí
+    - Rating cao xíu nha
+    - Tốt xíu nha
+    - Ổn ổn tí
+    - Tốt tốt tí
+    - Tốt chút
+    - Ổn chút
+    - Cao chút
+
+# regex:
+# - district: "(quận|k \\d+"
+
+- intent: goodbye
+  examples: |
+    - good bye
+    - bye bye
+    - tạm biệt em
+    - tạm biệt bot nhá
+    - bye
+    - goodbye
+    - g9
+    - good night
+    - bye bye
+    - tạm biệt
+    - Hẹn gặp lại
+    - Ngủ ngon
+    - Chúc ngủ ngon
+    - Nói chuyện sau nhé
+    - Tôi sẽ liên hệ sau
+    - tạm biệt em
+    - tạm biệt bot nhá
+    - Biến
+    - Không
+    - Del
+    - Cút
+    - Đm
+
+
+- intent: ask_ability
+  examples: |
+    - em có thể làm những gì nhỉ
+    - em có chức năng gì?
+    - em giúp gì được anh không?
+    - em có thể giúp gì cho anh?
+    - em biết làm gì?
+    - em hỗ trợ anh như thế nào?
+    - cho anh xem các chức năng của em
+    - Hãy nêu chức năng của bot
+
+
+- intent: thankyou
+  examples: |
+    - cảm ơn em nhá
+    - thanks em nha
+    - cảm ơn nha
+    - good job
+    - thank you
+    - cảm ơn bot nha
+    - thanks bot
+    - cảm ơn
+    - thank you so much
+    - great! Thanks
+
+
+- intent: praise
+  examples: |
+    - bot giỏi quá
+    - great
+    - awsome
+    - bot làm tốt lắm
+    - ui giỏi thế
+    - bot thông minh
+    - đẹp trai đấy
+    - Ênm đệnp léăm
+
+
+- intent: decry
+  examples: |
+    - quá tệ
+    - ngu ngốc
+    - chả biết gì cả
+    - ngu thật
+    - dở ghê
+    - có thế mà cũng không biết
+    - kém cói
+
+
+  
+

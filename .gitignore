@@ -1,0 +1,8 @@
+env/
+myenv/
+.rasa/
+.idea/
+venv/
+fasttext/
+__pycache__/
+actions/__pycache__/

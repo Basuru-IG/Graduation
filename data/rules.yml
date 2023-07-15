@@ -1,0 +1,77 @@
+version: "3.1"
+
+
+rules:
+# - rule: Activate randomize when randomize is detected
+#   steps:
+#   - intent: randomize
+#   - action: action_get_restaurant_randomize
+
+# - rule: Activate nearby when nearby is detected
+#   steps:
+#   - intent: nearby
+#   - action: action_get_restaurant_nearby
+
+# - rule: Activate by_order when by_order is detected
+#   steps:
+#   - intent: by_order
+#   - action: action_get_restaurant_by_order
+- rule: Greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+
+- rule: Say user name
+  steps:
+  - intent: answer_name
+  - action: utter_greet_with_name
+
+- rule: Ask for eat
+  steps: 
+  - intent: ask_for_eat
+  - action: action_recommend
+
+- rule:  thanks you
+  steps:
+  - intent: thankyou
+  - action: utter_thanks
+
+- rule: Find nearby
+  steps:
+    - intent: inform_adress
+    - action: action_get_restaurant_nearby
+
+- rule: Find by order
+  steps:
+    - intent: by_order
+    - action: action_get_restaurant_by_order
+
+- rule: Find random
+  steps:
+    - intent: randomize
+    - action: action_get_restaurant_randomize
+
+- rule: Give location
+  steps:
+    - intent: nearby
+    - action: utter_ask_location
+
+- rule: Give option
+  steps:
+    - intent: restaurant_search
+    - action: utter_ask_route
+
+- rule: Give ability
+  steps:
+    - intent: ask_ability
+    - action: utter_show_ability
+
+- rule: Goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+# - rule: Say 'I am a bot' anytime the user challenges
+#   steps:
+#   - intent: bot_challenge
+#   - action: utter_iamabot
