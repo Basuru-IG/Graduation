@@ -76,7 +76,7 @@ class ActionRecommend(Action):
 
 def get_coordinates(address):
     address=address+" Thanh Pho Ho Chi Minh"
-    api_key = 'AIzaSyBHaYmZS5O6SFZdu-0rMh_wD6JPNRnlEb0'  # Replace with your API key
+    api_key = ''  # Replace with your API key
     url = f'https://maps.googleapis.com/maps/api/geocode/json?address={address}&key={api_key}'
     print(url)
     response = requests.get(url)
